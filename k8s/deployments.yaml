@@ -2,6 +2,8 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: svc-a
+  labels:
+    app: svc-a
   namespace: demo-chaos
 spec:
   replicas: 2
@@ -41,6 +43,8 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: svc-b
+  labels:
+    app: svc-b
   namespace: demo-chaos
 spec:
   replicas: 2
@@ -80,6 +84,8 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: svc-c
+  labels:
+    app: svc-c
   namespace: demo-chaos
 spec:
   replicas: 2
